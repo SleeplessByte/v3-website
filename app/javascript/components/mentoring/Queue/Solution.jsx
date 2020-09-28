@@ -1,6 +1,7 @@
 import React from 'react'
 import dayjs from 'dayjs'
 import RelativeTime from 'dayjs/plugin/relativeTime'
+import { TrackIcon } from '../../common/TrackIcon'
 dayjs.extend(RelativeTime)
 
 export function Solution({
@@ -18,11 +19,7 @@ export function Solution({
   return (
     <tr>
       <td>
-        <img
-          style={{ width: 100 }}
-          src={trackIconUrl}
-          alt={`icon indicating ${trackTitle}`}
-        />
+        <TrackIcon track={{ title: trackTitle, iconUrl: trackIconUrl }} />
       </td>
       <td>
         <img
